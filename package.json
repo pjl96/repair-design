@@ -4,7 +4,9 @@
   "description": "Сайт по ремонту квартир",
   "main": "index.js",
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-lodash": "^0.1.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
