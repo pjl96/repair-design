@@ -323,6 +323,7 @@ template {
   margin: auto; }
 
 .button {
+  font-family: 'Futura Demi', sans-serif;
   padding: 13px 20px;
   border: none;
   border-radius: 2px;
@@ -350,6 +351,7 @@ template {
   align-items: center; }
 
 .logo {
+  font-family: 'Futura Demi', sans-serif;
   color: #E3B873;
   text-transform: uppercase; }
 
@@ -360,6 +362,7 @@ template {
   margin-right: 40px; }
 
 .phone {
+  font-family: 'Futura Demi', sans-serif;
   color: #E3B873; }
 
 .contacts__phone {
@@ -378,6 +381,7 @@ template {
     max-width: 670px; }
   .hero__text {
     font-size: 22px;
+    line-height: 30px;
     max-width: 500px; }
   .hero__button {
     margin-right: 20px; }
@@ -385,9 +389,11 @@ template {
     position: absolute;
     left: 0;
     top: 0;
+    font-family: 'Futura Demi', sans-serif;
     max-width: 80px;
     height: 100%; }
   .hero__scroll-down {
+    font-family: 'Yeseva One', cursive;
     position: absolute;
     display: flex;
     align-items: center;
@@ -416,7 +422,9 @@ template {
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-size: 40px; }
+  font-size: 40px;
+  line-height: 53px;
+  font-weight: normal; }
   .title--primary {
     color: #E3B873; }
 
