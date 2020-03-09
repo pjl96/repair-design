@@ -1,9 +1,9 @@
-@media screen and ( max-width: 1200px )
+@media screen and ( max-width: 1300px )
   html 
     font-size: 12px
     .nav
-    &__item
-      margin-right: 1rem
+      &__item
+        margin-right: 1rem
 @media screen and ( max-width: 992px )
   .nav 
     display: none
@@ -12,7 +12,9 @@
       display: none
     &__content
       margin-left: 0
-@media screen and ( max-width: 570px )
+    &__scroll-down
+      min-height: 4.5rem
+@media screen and ( max-width: 576px )
   .contacts
     &__phone
       margin-right: 0
@@ -20,21 +22,28 @@
       text-decoration: none
     &__button
       display: none
-  .title
-    font-size: 1.64rem
   .hero
+    &__title
+      font-size: 1.9rem
+      line-height: 135%
     &__scroll-down
       display: none
     &__content
-      max-width: 22.86rem
+      max-width: 28rem
     &__text
-      font-size: 1.29rem
+      font-size: 1.5rem
       margin-bottom: 2.28rem
     &__button
       display: block
+      width: 100%
+      font-size: 1.1rem
       min-width: 22.86rem
       margin-bottom: 1.85rem
-@media screen and ( max-height: 520px )
+@media screen and ( max-height: 570px )
+  .hero
+    &__scroll-down
+      min-height: 3rem
+@media screen and ( max-height: 470px )
   .hero
     &__scroll-down
       display: none
