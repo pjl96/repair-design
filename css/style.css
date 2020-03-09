@@ -543,6 +543,10 @@ body {
     min-width: 22.86rem;
     margin-bottom: 1.85rem; } }
 
+@media screen and (max-width: 355px) {
+  .hero__text {
+    max-width: 22.5rem; } }
+
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
     min-height: 3rem; } }
