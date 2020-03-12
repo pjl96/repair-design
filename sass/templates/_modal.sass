@@ -1,4 +1,6 @@
 .modal
+  opacity: 0
+  visibility: hidden
   position: fixed
   z-index: 199
   left: 0
@@ -11,10 +13,13 @@
   display: flex
   align-items: center
   justify-content: center
+  &--visible 
+    opacity: 1
+    visibility: visible
   &__dialog
     position: relative
     max-width: 36.35rem
-    background: $dark url('../img/bg-lines.svg') no-repeat center
+    background: $dark url('../img/bg-lines.png') no-repeat center
     padding: 2.357rem 3.5rem 1.928rem
     color: $light
   &__close

@@ -660,6 +660,8 @@ img {
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
   left: 0;
@@ -672,10 +674,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.35rem;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    background: #131313 url("../img/bg-lines.png") no-repeat center;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #fff; }
   .modal__close {
