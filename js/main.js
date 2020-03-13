@@ -30,4 +30,20 @@ $(document).ready(function () {
     }
   });
 
+  //Прокрутка страницы ввехр
+  $(function(){
+    $(window).scroll(function(){ //Функция прокрутки
+      if($(window).scrollTop() > 800) { //Если прокрутили больше 800
+        $('.scroll-top__btn').show(); //Показать кнопку
+      } else {
+        $('.scroll-top__btn').hide();  //Если нет - спрятать
+      }
+    });
+   
+    $('.scroll-top__btn').click(function(){ //Клик по кнопке
+      $('html, body').animate({scrollTop: 0}, 900); //Пролистать страницу вверх
+      return false; //Возврат значения
+    });
+  });
+
 });
