@@ -329,7 +329,7 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  width: 30%; }
+  flex-basis: 30%; }
 
 .col-50 {
   width: 50%; }
@@ -368,11 +368,14 @@ img {
     text-align: center; }
     .section-title--left {
       text-align: left; }
+    .section-title--light {
+      color: #fff; }
     .section-title__heading {
       text-transform: uppercase;
       font-weight: normal;
       font-family: 'Yeseva One', cursive;
-      line-height: 138.6%; }
+      line-height: 138.6%;
+      padding-bottom: 0.1rem; }
       .section-title__heading--primary {
         color: #E3B873; }
     .section-title__word {
@@ -432,15 +435,15 @@ img {
   font-size: 1.285rem;
   color: #fff;
   padding: 0.5rem 0; }
-  .input::-webkit-input-placeholder {
+  .input--light::-webkit-input-placeholder {
     color: #fff; }
-  .input::-moz-placeholder {
+  .input--light::-moz-placeholder {
     color: #fff; }
-  .input:-ms-input-placeholder {
+  .input--light:-ms-input-placeholder {
     color: #fff; }
-  .input::-ms-input-placeholder {
+  .input--light::-ms-input-placeholder {
     color: #fff; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #fff; }
 
 .policy__checkbox {
@@ -622,6 +625,9 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.projects {
+  padding-bottom: 30rem; }
+
 .col-50--img {
   margin-top: -14rem; }
 
@@ -676,6 +682,71 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: 0; }
+
+.control__section-title {
+  margin-bottom: 2.214rem;
+  margin-top: -30rem; }
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4.428rem;
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") center/cover no-repeat;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  max-width: 40.785rem;
+  margin: auto;
+  margin-bottom: 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.42rem; }
+  .control__text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px; }
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__button {
+  padding: 1.286rem 4.785rem; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem; }
+  .control__policy-label {
+    justify-content: center; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -840,7 +911,7 @@ img {
   .hero::after {
     display: none; } }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 945px) {
   .col-50 {
     width: 100%; }
   .row {
@@ -859,6 +930,25 @@ img {
     display: none; }
   .section-title__text {
     width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  .control__form {
+    max-width: 25rem;
+    margin: auto;
+    flex-direction: column; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100 .control__input-group; }
+    .control__input-group:first-of-type {
+      margin-bottom: 4.5rem; }
+  .control__policy {
+    margin-top: 0.5rem;
+    margin-bottom: 4.5rem; }
+    .control__policy-label {
+      justify-content: start; }
+  .control__button {
+    order: 5; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
@@ -882,11 +972,19 @@ img {
     width: 100%;
     font-size: 1.1rem;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .control__video {
+    min-width: 24.285rem;
+    min-height: 14.785rem; }
+  .video__play {
+    width: 7rem;
+    height: 7rem; } }
 
 @media screen and (max-width: 500px) {
   .design__title {
-    max-width: 32.3rem; } }
+    max-width: 32.3rem; }
+  .control__text {
+    font-size: 1.1rem; } }
 
 @media screen and (max-width: 355px) {
   .hero__text {
