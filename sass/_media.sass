@@ -43,6 +43,22 @@
           display: none
       &__text
         width: 100%
+  .team 
+    background-color: $dark
+    &__wrapper 
+      flex-direction: column
+      justify-content: center
+    &__card 
+      margin: 3.857rem auto
+    &__section-title 
+      margin-top: 0
+    &__text
+      color: $light
+      padding-bottom: 0
+  .footer 
+    &__wrap 
+      margin-top: 0
+
 
 
 @media screen and ( max-width: 768px )
@@ -69,6 +85,8 @@
 
 
 @media screen and ( max-width: 576px )
+  .section 
+    padding-top: 10px
   .contacts
     &__phone
       margin-right: 0
@@ -111,6 +129,9 @@
       color: #ffffff
   .how-work 
     display: none
+  .team 
+    &__text 
+      display: none
 
 @media screen and ( max-width: 500px )
   .design
