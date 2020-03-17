@@ -72,4 +72,82 @@ $(document).ready(function () {
     }
   ).init();
   
+  // Валидация форм
+  // Модальное окно
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    }
+  });
+  
+  // Форма секции "Онлайн контроль"
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required"
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Заполните поле",
+    }
+  });
+  
+  // Форма футера
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      userQuestion: {
+        required: true,
+      }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Заполните поле",
+      userQuestion: "Задайте вопрос"
+    }
+  });
+
+  // Маска для телефона
+  $('[type=tel]').mask('+7 (000) 000-00-00');
+
 });

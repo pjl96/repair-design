@@ -483,6 +483,12 @@ img {
   text-decoration: none;
   z-index: 999; }
 
+div.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
+
 .header {
   position: fixed;
   left: 0;
@@ -729,10 +735,12 @@ img {
   max-width: 55rem;
   margin: auto; }
 
-.control__input-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 30%; }
+.control__input {
+  color: #131313; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
 
 .control__label {
   margin-bottom: -7px; }
@@ -933,10 +941,12 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -1022,6 +1032,8 @@ img {
     font-size: 1.1rem;
     min-width: 22.86rem;
     margin-bottom: 1.85rem; }
+  .control__input {
+    color: #fff; }
   .control__video {
     min-width: 24.285rem;
     min-height: 14.785rem; }
