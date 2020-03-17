@@ -66,6 +66,10 @@ $(document).ready(function () {
   next.css('left', prev.width() + 30 + bullets.width() + 30)
   bullets.css('left', prev.width() + 30)
 
-  new WOW().init();
+  new WOW(
+    {
+      mobile: false,
+    }
+  ).init();
   
 });

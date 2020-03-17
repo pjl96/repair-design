@@ -454,7 +454,8 @@ img {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -463,9 +464,10 @@ img {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.6rem; }
+  .policy__label--center {
+    justify-content: center; }
 
 .scroll-top__btn {
-  font-family: 'Yeseva One', cursive;
   position: fixed;
   display: none;
   right: 30px;
@@ -841,6 +843,53 @@ img {
   color: #fff;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
 
+.how-work {
+  padding-bottom: 30rem; }
+
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-top: -20rem;
+    margin-bottom: 3.714rem;
+    padding: 2.5rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 18px 67px; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -984,7 +1033,22 @@ img {
   .design__title {
     max-width: 32.3rem; }
   .control__text {
-    font-size: 1.1rem; } }
+    font-size: 1.1rem; }
+  .footer {
+    background: #131313; }
+    .footer__wrap {
+      width: 100%;
+      padding: 0;
+      background: #131313; }
+    .footer__form {
+      width: 100%; }
+    .footer__input-group {
+      flex-basis: 100%; }
+    .footer__button {
+      width: 100%; }
+  .policy__label--center {
+    justify-content: start;
+    font-size: 1rem; } }
 
 @media screen and (max-width: 355px) {
   .hero__text {
