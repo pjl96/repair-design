@@ -852,7 +852,9 @@ input.invalid {
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
 
 .how-work {
-  padding-bottom: 30rem; }
+  padding-bottom: 30rem;
+  padding-top: 30rem;
+  margin-top: -35rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
@@ -1039,7 +1041,15 @@ input.invalid {
     min-height: 14.785rem; }
   .video__play {
     width: 7rem;
-    height: 7rem; } }
+    height: 7rem; }
+  .design {
+    background-color: #131313; }
+    .design__section-title {
+      color: #ffffff; }
+    .design__title {
+      color: #ffffff; }
+  .how-work {
+    display: none; } }
 
 @media screen and (max-width: 500px) {
   .design__title {

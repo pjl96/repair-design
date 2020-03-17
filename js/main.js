@@ -78,13 +78,11 @@ $(document).ready(function () {
     errorClass: "invalid",
     errorElement: "div",
     rules: {
-      // simple rule, converted to {required:true}
       userName: {
         required: true,
         minlength: 2
       },
       userPhone: "required",
-      // compound rule
       userEmail: {
         required: true,
         email: true
