@@ -633,7 +633,7 @@ input.invalid {
   .title--primary {
     color: #E3B873; }
 
-.projects {
+.projects__last {
   padding-bottom: 30rem; }
 
 .col-50--img {
@@ -756,7 +756,8 @@ input.invalid {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2); }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -948,6 +949,7 @@ input.invalid {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
   .footer__wrap {
+    background: url("../img/bg-lines.png") no-repeat center/cover;
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
@@ -1009,7 +1011,7 @@ input.invalid {
   .modal__dialog {
     position: relative;
     max-width: 36.35rem;
-    background: #131313 url("../img/bg-lines.png") no-repeat center;
+    background: #131313 url("../img/bg-lines.png") no-repeat center/cover;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #fff; }
   .modal__close {
@@ -1116,6 +1118,8 @@ input.invalid {
 @media screen and (max-width: 576px) {
   .section {
     padding-top: 10px; }
+    .section-title__text {
+      height: 96px; }
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -1131,14 +1135,37 @@ input.invalid {
     max-width: 28rem; }
   .hero__text {
     font-size: 1.5rem;
-    margin-bottom: 2.28rem; }
+    margin-bottom: 2.28rem;
+    height: 125px; }
   .hero__button {
     display: block;
     width: 100%;
     font-size: 1.1rem;
     min-width: 22.86rem;
     margin-bottom: 1.85rem; }
+  .projects__last {
+    padding-bottom: 70rem; }
+  .control__section-title {
+    margin-top: -66.2rem; }
+  .control__text {
+    color: #fff;
+    height: 200px;
+    margin-bottom: 0; }
+  .control__label {
+    color: #959595; }
   .control__input {
+    border-bottom-color: #fff; }
+    .control__input::-webkit-input-placeholder {
+      color: #fff; }
+    .control__input::-moz-placeholder {
+      color: #fff; }
+    .control__input:-ms-input-placeholder {
+      color: #fff; }
+    .control__input::-ms-input-placeholder {
+      color: #fff; }
+    .control__input::placeholder {
+      color: #fff; }
+  .control__policy-label {
     color: #fff; }
   .control__video {
     min-width: 24.285rem;
@@ -1161,7 +1188,7 @@ input.invalid {
   .design__title {
     max-width: 32.3rem; }
   .control__text {
-    font-size: 1.1rem; }
+    font-size: 1rem; }
   .footer {
     background: #131313; }
     .footer__wrap {
@@ -1180,7 +1207,9 @@ input.invalid {
 
 @media screen and (max-width: 355px) {
   .hero__text {
-    max-width: 22.5rem; } }
+    max-width: 22.5rem; }
+  .section-title__text {
+    width: 270px; } }
 
 @media screen and (max-height: 620px) {
   .hero__scroll-down {

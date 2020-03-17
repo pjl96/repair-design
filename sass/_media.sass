@@ -87,6 +87,9 @@
 @media screen and ( max-width: 576px )
   .section 
     padding-top: 10px
+    &-title 
+      &__text 
+        height: 96px
   .contacts
     &__phone
       margin-right: 0
@@ -105,14 +108,30 @@
     &__text
       font-size: 1.5rem
       margin-bottom: 2.28rem
+      height: 125px
     &__button
       display: block
       width: 100%
       font-size: 1.1rem
       min-width: 22.86rem
       margin-bottom: 1.85rem
+  .projects 
+    &__last 
+      padding-bottom: 70rem
   .control 
+    &__section-title 
+      margin-top: -66.2rem
+    &__text 
+      color: $light
+      height: 200px
+      margin-bottom: 0
+    &__label 
+      color: $secondary
     &__input 
+      border-bottom-color: $light
+      &::placeholder 
+        color: $light
+    &__policy-label
       color: $light
     &__video 
       min-width: 24.285rem
@@ -139,7 +158,7 @@
       max-width: 32.3rem
   .control 
     &__text 
-      font-size: 1.1rem
+      font-size: 1rem
   .footer 
     background: $dark
     &__wrap 
@@ -163,6 +182,10 @@
   .hero
     &__text
       max-width: 22.5rem
+  .section 
+    &-title 
+      &__text 
+        width: 270px
 
 
 @media screen and ( max-height: 620px )
