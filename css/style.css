@@ -1164,7 +1164,8 @@ input.invalid {
   .control__label {
     color: #959595; }
   .control__input {
-    border-bottom-color: #fff; }
+    border-bottom-color: #fff;
+    color: #fff; }
     .control__input::-webkit-input-placeholder {
       color: #fff; }
     .control__input::-moz-placeholder {
