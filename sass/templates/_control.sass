@@ -41,11 +41,14 @@
     margin: auto
   &__input 
     color: $dark
+    &::placeholder
+      color: $dark
     &-group
       display: flex
       flex-direction: column
       flex-basis: 30%
   &__label 
+    color: $secondary
     margin-bottom: -7px
   &__button 
     padding: 1.286rem 4.785rem
@@ -58,4 +61,3 @@
   &__play 
     position: relative
     margin: auto
-    box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2)
