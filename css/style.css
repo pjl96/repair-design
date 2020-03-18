@@ -972,6 +972,9 @@ input.invalid {
   max-width: 273px;
   text-align: center; }
 
+.clients {
+  padding-bottom: 35rem; }
+
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
@@ -1016,6 +1019,36 @@ input.invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    max-width: 66rem;
+    min-height: 33.214rem;
+    margin: auto;
+    margin-bottom: 4rem; }
+  .footer__social {
+    display: flex;
+    justify-content: center; }
+  .footer__tag {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    order: 1; }
+  .footer__text {
+    text-align: center;
+    font-family: "Yeseva One", cursive;
+    font-weight: normal;
+    font-size: 1.43rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin: 0; }
+  .footer__img {
+    margin-top: 2rem;
+    margin-bottom: 3rem; }
+    .footer__img:first-of-type {
+      margin-right: 1rem; }
+
+.wrapper-map {
+  order: 2; }
 
 .modal {
   opacity: 0;
@@ -1210,7 +1243,9 @@ input.invalid {
   .how-work {
     display: none; }
   .team__text {
-    display: none; } }
+    display: none; }
+  .footer {
+    background: #131313; } }
 
 @media screen and (max-width: 500px) {
   .design__title {
@@ -1233,7 +1268,25 @@ input.invalid {
       width: 100%; }
   .policy__label--center {
     justify-content: start;
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .footer__order {
+    display: flex;
+    flex-direction: column; }
+  .footer__map {
+    order: -1;
+    height: 18.214rem;
+    min-height: 18.214rem;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); }
+    .footer__map.ymaps-2-1-76-map .ymaps-2-1-76-i-ua_js_yes .ymaps-2-1-76-map-bg .ymaps-2-1-76-islets_map-lang-ru {
+      height: 18.214rem; }
+  .footer__tag {
+    display: block;
+    text-align: center;
+    width: 22.465rem;
+    margin: auto;
+    order: 0; }
+  .footer__menu {
+    display: none; } }
 
 @media screen and (max-width: 355px) {
   .hero__text {
