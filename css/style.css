@@ -445,6 +445,8 @@ img {
     color: #fff; }
   .input--light::placeholder {
     color: #fff; }
+  .input-group {
+    position: relative; }
 
 .policy__checkbox {
   opacity: 0;
@@ -483,8 +485,23 @@ img {
   text-decoration: none;
   z-index: 999; }
 
-div.invalid {
-  color: tomato; }
+.footer__form div.invalid {
+  color: tomato;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0; }
+
+.modal__form div.invalid {
+  color: tomato;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0; }
+
+.control__form div.invalid {
+  color: tomato;
+  position: absolute;
+  left: 0;
+  bottom: -1rem; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
@@ -652,7 +669,7 @@ input.invalid {
       padding-bottom: 6rem; }
   .swiper-slide__heading {
     font-size: 1.285rem;
-    font-weight: 1.78rem;
+    line-height: 1.78rem;
     font-family: 'Yeseva One', cursive;
     font-weight: normal;
     color: #E3B873;
@@ -1114,7 +1131,7 @@ input.invalid {
   .control__input-group {
     display: flex;
     flex-direction: column;
-    flex-basis: 100 .control__input-group; }
+    flex-basis: 100%; }
     .control__input-group:first-of-type {
       margin-bottom: 4.5rem; }
   .control__policy {

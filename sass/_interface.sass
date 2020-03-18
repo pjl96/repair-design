@@ -32,6 +32,8 @@
   &--light 
     &::placeholder
       color: $light
+  &-group 
+    position: relative
 .policy
   &__checkbox 
     opacity: 0
@@ -70,9 +72,24 @@
     color: $light
     text-decoration: none
     z-index: 999
-div 
+.footer__form div 
   &.invalid 
     color: tomato
+    position: absolute
+    bottom: -1.5rem
+    left: 0
+.modal__form div 
+  &.invalid 
+    color: tomato
+    position: absolute
+    bottom: -0.5rem
+    left: 0
+.control__form div 
+  &.invalid 
+    color: tomato
+    position: absolute
+    left: 0
+    bottom: -1rem
 input 
   &.invalid 
     border-bottom: 1px solid tomato
