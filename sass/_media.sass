@@ -58,13 +58,17 @@
   .footer 
     &__wrap 
       margin-top: 0
+  .clients 
+    flex-direction: column
+    &__card 
+      width: 45%
+      margin: auto
+      margin-bottom: 5rem
 
 
 
 @media screen and ( max-width: 768px )
   .control 
-    &__video 
-      
     &__form 
       max-width: 25rem
       margin: auto
@@ -82,6 +86,10 @@
         justify-content: start
     &__button 
       order: 5
+  .clients 
+    display: none
+  .footer 
+    background: $dark
 
 
 @media screen and ( max-width: 576px )
@@ -152,8 +160,6 @@
   .team 
     &__text 
       display: none
-  .footer 
-    background: $dark
 
 @media screen and ( max-width: 500px )
   .design
