@@ -185,7 +185,7 @@ $(document).ready(function () {
 
   myMap.geoObjects
   .add(myPlacemark)
-  .add(myPlacemarkWithContent)
+  .add(myPlacemarkWithContent);
   }
 
 });
