@@ -1120,6 +1120,12 @@ input.invalid {
   margin: auto;
   margin-bottom: 4rem; }
 
+.ymaps-2-1-76-map {
+  width: 66rem; }
+
+.ymaps-2-1-76-map .ymaps-2-1-76-i-ua_js_yes .ymaps-2-1-76-map-bg .ymaps-2-1-76-islets_map-lang-ru {
+  width: 66rem; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -1361,9 +1367,13 @@ input.invalid {
   .footer__menu {
     display: none; }
   .footer .map {
-    max-width: 270px;
+    width: 100%;
     min-height: 18rem;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); } }
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); }
+  .ymaps-2-1-76-map {
+    width: 100%; }
+  .ymaps-2-1-76-map .ymaps-2-1-76-i-ua_js_yes .ymaps-2-1-76-map-bg .ymaps-2-1-76-islets_map-lang-ru {
+    width: 100%; } }
 
 @media screen and (max-width: 355px) {
   .hero__text {
