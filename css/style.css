@@ -1068,11 +1068,6 @@ input.invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
-  .footer__map {
-    max-width: 66rem;
-    min-height: 33.214rem;
-    margin: auto;
-    margin-bottom: 4rem; }
   .footer__social {
     display: flex;
     justify-content: center; }
@@ -1081,6 +1076,9 @@ input.invalid {
     justify-content: center;
     flex-direction: column;
     order: 1; }
+  .footer__tel {
+    text-decoration: none;
+    color: #E3B873; }
   .footer__text {
     text-align: center;
     font-family: "Yeseva One", cursive;
@@ -1096,8 +1094,11 @@ input.invalid {
     .footer__img:first-of-type {
       margin-right: 1rem; }
 
-.wrapper-map {
-  order: 2; }
+.map {
+  max-width: 66rem;
+  min-height: 33.214rem;
+  margin: auto;
+  margin-bottom: 4rem; }
 
 .modal {
   opacity: 0;
@@ -1330,20 +1331,19 @@ input.invalid {
     display: flex;
     flex-direction: column; }
   .footer__map {
-    order: -1;
-    height: 18.214rem;
-    min-height: 18.214rem;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); }
-    .footer__map.ymaps-2-1-76-map .ymaps-2-1-76-i-ua_js_yes .ymaps-2-1-76-map-bg .ymaps-2-1-76-islets_map-lang-ru {
-      height: 18.214rem; }
+    order: -1; }
   .footer__tag {
     display: block;
     text-align: center;
-    width: 22.465rem;
+    max-width: 22.465rem;
     margin: auto;
     order: 0; }
   .footer__menu {
-    display: none; } }
+    display: none; }
+  .footer .map {
+    max-width: 270px;
+    min-height: 18rem;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); } }
 
 @media screen and (max-width: 355px) {
   .hero__text {
