@@ -187,4 +187,12 @@ $(document).ready(function () {
   .add(myPlacemark);
   }
 
+  // Анимация без библиотек
+  var anim = $('.project__title');
+  $(window).scroll(function(){
+    if ( $(window).scrollTop() <= $(anim).offset().top)  { 
+      anim.addClass('my-anim')
+     }
+    });
+
 });

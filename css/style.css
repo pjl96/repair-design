@@ -708,6 +708,26 @@ input.invalid {
   width: auto;
   bottom: 0; }
 
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.my-anim {
+  -webkit-animation: opacity 1s;
+  animation: opacity 1s; }
+
 .control__section-title {
   margin-bottom: 2.214rem;
   margin-top: -30rem; }
