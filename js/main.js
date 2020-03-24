@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var modal = $('.modal');
+  var modalThx = $('.modal-thx');
   var modalBtn = $('[data-toggle=modal]');
   var closeBtn = $('.modal__close');
 
@@ -10,7 +11,8 @@ $(document).ready(function () {
 
   // Обработка клика по крестику и скрытие модального окна
   closeBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
+    modal.removeClass('modal--visible');
+    modalThx.removeClass('modal-thx--visible');
   });
 
   // Обработка нажатия клавиши Esc
@@ -19,14 +21,24 @@ $(document).ready(function () {
     if (e.keyCode === 27) {
       modal.removeClass('modal--visible');
     };
+    if (e.keyCode === 27) {
+      modalThx.removeClass('modal--visible');
+    };
   });
   
   // Обработка клика, при открытом модальном окне
   $(modal).mouseup(function (e) { 
-    var modalDialog = $('.modal__dialog')
+    var modalDialog = $('.modal__dialog');
     //Клик был не по модальному окну, и его дочерним элементам
     if (!modalDialog.is(e.target) && modalDialog.has(e.target).length === 0) {
-      modal.toggleClass('modal--visible'); // Скрываем модальное окно
+      modal.removeClass('modal--visible'); // Скрываем модальное окно
+    }
+  });
+  $(modalThx).mouseup(function (e) { 
+    var modalDialogThx = $('.modal-thx__dialog');
+    //Клик был не по модальному окну, и его дочерним элементам
+    if (!modalDialogThx.is(e.target) && modalDialogThx.has(e.target).length === 0) {
+      modalThx.removeClass('modal-thx--visible'); // Скрываем модальное окно
     }
   });
 
@@ -70,8 +82,7 @@ $(document).ready(function () {
     {
       mobile: false
     }
-  )
-  wow.init();
+  ).init();
   
   // Валидация форм
   // Модальное окно
@@ -107,7 +118,8 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          modal.removeClass('modal--visible')
+          modal.removeClass('modal--visible');
+          modalThx.addClass('modal-thx--visible');
         }
       });
     }
@@ -138,6 +150,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
+          modalThx.addClass('modal-thx--visible');
         }
       });
     }
@@ -172,6 +185,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
+          modalThx.addClass('modal-thx--visible');
         }
       });
     }
