@@ -391,6 +391,12 @@ img {
       font-size: 1.28rem;
       line-height: 2.07rem;
       max-width: 31.57rem; }
+      .section-title__text--left {
+        color: #fff;
+        font-size: 1.28rem;
+        line-height: 2.07rem;
+        max-width: 31.57rem;
+        text-align: left; }
     .section-title__image {
       display: flex;
       justify-content: center;

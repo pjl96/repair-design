@@ -1,7 +1,7 @@
 <?php
 
 $userName = $_POST['userName'];
-$userEmail = $_POST['userEmail'];
+$userQuestion = $_POST['userQuestion'];
 $userPhone = $_POST['userPhone'];
 
 // Load Composer's autoloader
@@ -29,8 +29,8 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}. Телефон: ${userPhone}. Почта: ${userEmail}";
+    $mail->Subject = 'Вопрос по дизайну квартир';
+    $mail->Body    = "Имя пользователя: ${userName}. Телефон: ${userPhone}. Почта: ${userEmail}. Вопрос: ${userQuestion}";
 
     $mail->send();
     header('Location: thanks.html');

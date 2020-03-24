@@ -58,7 +58,7 @@
             <div class="section-title section-title--left">
               <h2 class="section-title__heading section-title__heading--primary project__title">Завершенные <span class="section-title__word">проекты</span></h2>
               <!-- /.section-title__heading -->
-              <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
+              <p class="section-title__text--left">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
             </div>
             <!-- /.section-title -->
             <!-- Slider main container -->
@@ -173,7 +173,7 @@
         <p class="control__text">
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
-        <form action="send.php" method="POST" class="form control__form">
+        <form action="send-control.php" method="POST" class="form control__form">
             <div class="control__input-group input-group">
               <label for="control-user-name" class="label form__label control__label">Имя</label>
               <input type="text" autocomplete="off" class="input form__input control__input" name="userName" id="control-user-name" placeholder="Как вас зовут:">
@@ -585,7 +585,7 @@
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
-        <form action="send.php" method="POST" class="form footer__form">
+        <form action="send-footer.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="footer-user-name" class="label form__label label--light">Имя</label>
             <input type="text" autocomplete="off" class="input form__input footer__input input--light" name="userName" id="footer-user-name" placeholder="Как вас зовут:">
@@ -650,7 +650,7 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-      <form action="send.php" method="POST" class="form modal__form">
+      <form action="send-modal.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="modal-user-name" class="label form__label label--light">Имя</label>
           <input type="text" autocomplete="off" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
