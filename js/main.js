@@ -99,6 +99,17 @@ $(document).ready(function () {
         required: "Заполните поле",
         email: "Введите корректный email"
       }
+    }, 
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send-modal.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible')
+        }
+      });
     }
   });
   
@@ -119,6 +130,16 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв"
       },
       userPhone: "Заполните поле",
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send-control.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+        }
+      });
     }
   });
   
@@ -143,6 +164,16 @@ $(document).ready(function () {
       },
       userPhone: "Заполните поле",
       userQuestion: "Задайте вопрос"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send-footer.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+        }
+      });
     }
   });
 
