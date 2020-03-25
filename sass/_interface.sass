@@ -72,24 +72,42 @@
     color: $light
     text-decoration: none
     z-index: 999
-.footer__form div 
-  &.invalid 
-    color: tomato
-    position: absolute
-    bottom: -1.5rem
-    left: 0
+.footer
+  &__form div 
+    &.invalid 
+      color: tomato
+      position: absolute
+      bottom: -1.5rem
+      left: 0
+  &__policy
+    position: relative
+    & div.invalid
+      position: absolute
+      top: 3rem
+      left: 9.3rem
 .modal__form div 
   &.invalid 
     color: tomato
     position: absolute
     bottom: -0.5rem
     left: 0
-.control__form div 
-  &.invalid 
-    color: tomato
+  &#policyCheckbox-error 
     position: absolute
-    left: 0
-    bottom: -1rem
+    bottom: 5.5rem
+    left: 3.5rem
+.control 
+  &__form div 
+    &.invalid 
+      color: tomato
+      position: absolute
+      left: 0
+      bottom: -1rem
+  &__policy
+    position: relative
+    & div.invalid
+      position: absolute
+      top: 3rem
+      left: 18rem
 input 
   &.invalid 
     border-bottom: 1px solid tomato

@@ -22,7 +22,7 @@ $(document).ready(function () {
       modal.removeClass('modal--visible');
     };
     if (e.keyCode === 27) {
-      modalThx.removeClass('modal--visible');
+      modalThx.removeClass('modal-thx--visible');
     };
   });
   
@@ -94,6 +94,7 @@ $(document).ready(function () {
         required: true,
         minlength: 2
       },
+      policyCheckbox: "required",
       userPhone: "required",
       userEmail: {
         required: true,
@@ -105,6 +106,7 @@ $(document).ready(function () {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв"
       },
+      policyCheckbox: "Согласие обязательно",
       userPhone: "Заполните поле",
       userEmail: {
         required: "Заполните поле",
@@ -134,13 +136,15 @@ $(document).ready(function () {
         required: true,
         minlength: 2
       },
-      userPhone: "required"
+      userPhone: "required",
+      policyCheckbox: "required"
     },
     messages: {
       userName: {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв"
       },
+      policyCheckbox: "Согласие обязательно",
       userPhone: "Заполните поле",
     },
     submitHandler: function(form) {
@@ -165,6 +169,7 @@ $(document).ready(function () {
         required: true,
         minlength: 2
       },
+      policyCheckbox: "required",
       userPhone: "required",
       userQuestion: {
         required: true,
@@ -175,6 +180,7 @@ $(document).ready(function () {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв"
       },
+      policyCheckbox: "Согласие обязательно",
       userPhone: "Заполните поле",
       userQuestion: "Задайте вопрос"
     },

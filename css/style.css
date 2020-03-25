@@ -497,17 +497,36 @@ img {
   bottom: -1.5rem;
   left: 0; }
 
+.footer__policy {
+  position: relative; }
+  .footer__policy div.invalid {
+    position: absolute;
+    top: 3rem;
+    left: 9.3rem; }
+
 .modal__form div.invalid {
   color: tomato;
   position: absolute;
   bottom: -0.5rem;
   left: 0; }
 
+.modal__form div#policyCheckbox-error {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 3.5rem; }
+
 .control__form div.invalid {
   color: tomato;
   position: absolute;
   left: 0;
   bottom: -1rem; }
+
+.control__policy {
+  position: relative; }
+  .control__policy div.invalid {
+    position: absolute;
+    top: 3rem;
+    left: 18rem; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
