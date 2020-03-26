@@ -531,6 +531,36 @@ img {
 input.invalid {
   border-bottom: 1px solid tomato; }
 
+.lines-first {
+  position: relative;
+  z-index: -1; }
+  .lines-first-bg {
+    position: absolute;
+    opacity: 0.2;
+    top: -50%;
+    left: 0;
+    width: 100%; }
+
+.lines-second {
+  position: relative; }
+  .lines-second-bg {
+    z-index: -1;
+    position: absolute;
+    opacity: 0.2;
+    top: -20%;
+    left: 0;
+    width: 100%; }
+
+.lines-third {
+  position: relative; }
+  .lines-third-bg {
+    z-index: -1;
+    position: absolute;
+    opacity: 0.2;
+    top: -60%;
+    left: 0;
+    width: 100%; }
+
 .header {
   position: fixed;
   left: 0;
@@ -549,7 +579,8 @@ input.invalid {
   font-family: 'Futura Demi', sans-serif;
   color: #E3B873;
   text-transform: uppercase;
-  margin-right: 1.4rem; }
+  margin-right: 1.4rem;
+  text-decoration: none; }
 
 .nav__item {
   color: #fff;
@@ -570,6 +601,7 @@ input.invalid {
   margin-right: 3rem; }
 
 .hero {
+  z-index: 2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -587,6 +619,7 @@ input.invalid {
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
   .hero::after {
+    z-index: 0;
     content: '';
     width: 100%;
     height: 3.46rem;
@@ -675,8 +708,22 @@ input.invalid {
   .title--primary {
     color: #E3B873; }
 
-.projects__last {
-  padding-bottom: 30rem; }
+.projects {
+  position: relative; }
+  .projects-left {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1; }
+  .projects-right {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.1; }
+  .projects__last {
+    padding-bottom: 30rem; }
 
 .col-50--img {
   margin-top: -14rem; }
@@ -1023,8 +1070,7 @@ input.invalid {
   font-size: 1.43rem; }
 
 .clients {
-  padding-bottom: 25rem;
-  background-color: #fdfdfd; }
+  padding-bottom: 25rem; }
   .clients__card {
     position: relative;
     background-color: #fff;
@@ -1140,6 +1186,8 @@ input.invalid {
       margin-right: 1rem; }
 
 .map {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   max-width: 66rem;
   min-height: 33.214rem;
   margin: auto;
@@ -1308,6 +1356,14 @@ input.invalid {
       margin-bottom: 5rem; } }
 
 @media screen and (max-width: 768px) {
+  .lines-first-bg {
+    display: none; }
+  .lines-second-bg {
+    display: none; }
+  .projects-left {
+    display: none; }
+  .projects-right {
+    display: none; }
   .control__form {
     max-width: 25rem;
     margin: auto;

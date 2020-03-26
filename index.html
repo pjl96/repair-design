@@ -14,14 +14,14 @@
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo wow fadeInLeft">Repair Design Project</div>
+        <div class="logo menu__logo wow fadeInLeft"><a href="index.html" class="logo">Repair Design Project</a></div>
         <nav class="nav menu__nav">
-          <a href="#" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">Проекты</a>
-          <a href="#" class="nav__item">Замер</a>
-          <a href="#" class="nav__item">Команда</a>
-          <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
+          <a href="#hero" class="nav__item">Главная</a>
+          <a href="#projects" class="nav__item">Проекты</a>
+          <a href="#how-work" class="nav__item">Замер</a>
+          <a href="#team" class="nav__item">Команда</a>
+          <a href="#clients" class="nav__item">Отзывы</a>
+          <a href="#footer" class="nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -32,7 +32,7 @@
     </div>
     <!-- /.container -->
   </header>
-  <main>
+  <main id="hero">
     <section class="hero">
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
@@ -52,11 +52,12 @@
     <!-- /.hero -->
 
     <section class="section section--dark projects">
+      <img src="img/bg-lines-first.svg" alt="Линии" class="lines-first-bg">
       <div class="container">
         <div class="row">
           <div class="col-50">
             <div class="section-title section-title--left">
-              <h2 class="section-title__heading section-title__heading--primary project__title">Завершенные <span class="section-title__word">проекты</span></h2>
+              <h2 class="section-title__heading section-title__heading--primary project__title" id="projects">Завершенные <span class="section-title__word">проекты</span></h2>
               <!-- /.section-title__heading -->
               <p class="section-title__text--left">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
             </div>
@@ -153,156 +154,161 @@
         <!-- /.row -->
       </div>
       <!-- /.container -->
+      <img src="img/project-bg-left.png" alt="city" class="projects-left">
+      <img src="img/project-bg-right.png" alt="city" class="projects-right">
     </section>
 
-    <section class="section control">
-      <div class="container">
-        <div class="section-title control__section-title section-title--light">
-          <h2 class="section-title__heading">Онлайн контроль</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__image">
-            <img src="img/video.svg" alt="video">
+    <div class="lines-second">
+      <img src="img/bg-lines-second.svg" alt="lines" class="lines-second-bg">
+      <section class="section control">
+        <div class="container">
+          <div class="section-title control__section-title section-title--light">
+            <h2 class="section-title__heading">Онлайн контроль</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="img/video.svg" alt="video">
+            </div>
+            <!-- /.section-title__image -->
           </div>
-          <!-- /.section-title__image -->
-        </div>
-        <!-- /.section-title -->
-        <div class="control__video video">
-          <img src="img/play-icon.svg" alt="play-icon" class="video__play">
-        </div>
-        <!-- /.control__video video -->
-        <p class="control__text">
-          На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
-        </p>
-        <form action="send-control.php" method="POST" class="form control__form">
-            <div class="control__input-group input-group">
-              <label for="control-user-name" class="label form__label control__label">Имя</label>
-              <input type="text" autocomplete="off" class="input form__input control__input" name="userName" id="control-user-name" placeholder="Как вас зовут:">
-            </div>
-            <div class="control__input-group input-group">
-              <label for="control-user-phone" class="label form__label control__label">Телефон</label>
-              <input type="tel" autocomplete="off" class="input form__input control__input" name="userPhone" id="control-user-phone" placeholder="Ваш номер телефона:">
-            </div>
-            <button class="button button--primary control__button">Отправить</button>
-              <div class="policy control__policy">
-                <input type="checkbox" name="policyCheckbox"  id="control-policy-checkbox" class="policy__checkbox" checked>
-                <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+          <!-- /.section-title -->
+          <div class="control__video video">
+            <img src="img/play-icon.svg" alt="play-icon" class="video__play">
+          </div>
+          <!-- /.control__video video -->
+          <p class="control__text">
+            На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
+          </p>
+          <form action="send-control.php" method="POST" class="form control__form">
+              <div class="control__input-group input-group">
+                <label for="control-user-name" class="label form__label control__label">Имя</label>
+                <input type="text" autocomplete="off" class="input form__input control__input" name="userName" id="control-user-name" placeholder="Как вас зовут:">
               </div>
-              <!-- /.policy -->
-        </form>
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section control -->
-    
-    <section class="section types">
-      <div class="container">
-        <div class="section-title types__section-title wow zoomIn">
-          <h2 class="section-title__heading">Виды ремонта</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__image">
-            <img src="img/repair.svg" alt="repair">
-          </div>
-          <!-- /.section-title__image -->
+              <div class="control__input-group input-group">
+                <label for="control-user-phone" class="label form__label control__label">Телефон</label>
+                <input type="tel" autocomplete="off" class="input form__input control__input" name="userPhone" id="control-user-phone" placeholder="Ваш номер телефона:">
+              </div>
+              <button class="button button--primary control__button">Отправить</button>
+                <div class="policy control__policy">
+                  <input type="checkbox" name="policyCheckbox"  id="control-policy-checkbox" class="policy__checkbox" checked>
+                  <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+                </div>
+                <!-- /.policy -->
+          </form>
         </div>
-        <!-- /.section-title -->
-        <div class="row">
-          <div class="col-30">
-            <div class="card types__card">
-              <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image wow bounceInRight" data-wow-delay="0.1">
-              <div class="card__text wow fadeInLeftBig" data-wow-delay="0.6s">
-                <h3 class="card__title">Косметический ремонт</h3>
-                <!-- /.card__title -->
-                <ul class="card__list">
-                  <li class="card__item">Демонтаж старых покрытий</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Поклейка обоев</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Роспись стен и потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Укладка полов</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена сантехники</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена розеток и выключателей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена дверей</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag">от 900 руб / m<sup>2</sup></strong>
-                <!-- /.card__pricetag -->
-              </div>
-              <!-- /.card__text -->
+        <!-- /.container -->
+      </section>
+      <!-- /.section control -->
+      
+      <section class="section types">
+        <div class="container">
+          <div class="section-title types__section-title wow zoomIn">
+            <h2 class="section-title__heading">Виды ремонта</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="img/repair.svg" alt="repair">
             </div>
-            <!-- /.card -->
+            <!-- /.section-title__image -->
           </div>
-          <!-- /.col -->
-          <div class="col-30">
-            <div class="card types__card">
-              <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image wow bounceInRight" data-wow-delay="0.3s">
-              <div class="card__text wow fadeInLeftBig" data-wow-delay="0.3s">
-                <h3 class="card__title">Капитальный ремонт</h3>
-                <!-- /.card__title -->
-                <ul class="card__list">
-                  <li class="card__item">Демонтаж старых покрытий</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Поклейка обоев</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Роспись стен и потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Укладка полов</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена сантехники</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена розеток и выключателей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена дверей</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag">от 1800 руб / m<sup>2</sup></strong>
+          <!-- /.section-title -->
+          <div class="row">
+            <div class="col-30">
+              <div class="card types__card">
+                <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image wow bounceInRight" data-wow-delay="0.1">
+                <div class="card__text wow fadeInLeftBig" data-wow-delay="0.6s">
+                  <h3 class="card__title">Косметический ремонт</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Демонтаж старых покрытий</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Поклейка обоев</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Роспись стен и потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Укладка полов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена сантехники</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена розеток и выключателей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена дверей</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="card__pricetag">от 900 руб / m<sup>2</sup></strong>
+                  <!-- /.card__pricetag -->
+                </div>
+                <!-- /.card__text -->
               </div>
-              <!-- /.card__text -->
+              <!-- /.card -->
             </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-          <div class="col-30">
-            <div class="card types__card">
-              <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image wow bounceInRight" data-wow-delay="0.6s">
-              <div class="card__text wow fadeInLeftBig" data-wow-delay="0.1s">
-                <h3 class="card__title">Дизайнерский ремонт</h3>
-                <!-- /.card__title -->
-                <ul class="card__list">
-                  <li class="card__item">Демонтаж старых покрытий</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Поклейка обоев</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Роспись стен и потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Укладка полов</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена сантехники</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена розеток и выключателей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена дверей</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag">от 4000 руб / m<sup>2</sup></strong>
+            <!-- /.col -->
+            <div class="col-30">
+              <div class="card types__card">
+                <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image wow bounceInRight" data-wow-delay="0.3s">
+                <div class="card__text wow fadeInLeftBig" data-wow-delay="0.3s">
+                  <h3 class="card__title">Капитальный ремонт</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Демонтаж старых покрытий</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Поклейка обоев</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Роспись стен и потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Укладка полов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена сантехники</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена розеток и выключателей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена дверей</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="card__pricetag">от 1800 руб / m<sup>2</sup></strong>
+                </div>
+                <!-- /.card__text -->
               </div>
-              <!-- /.card__text -->
+              <!-- /.card -->
             </div>
-            <!-- /.card -->
+            <!-- /.col -->
+            <div class="col-30">
+              <div class="card types__card">
+                <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image wow bounceInRight" data-wow-delay="0.6s">
+                <div class="card__text wow fadeInLeftBig" data-wow-delay="0.1s">
+                  <h3 class="card__title">Дизайнерский ремонт</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Демонтаж старых покрытий</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Поклейка обоев</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Роспись стен и потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Укладка полов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена сантехники</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена розеток и выключателей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена дверей</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="card__pricetag">от 4000 руб / m<sup>2</sup></strong>
+                </div>
+                <!-- /.card__text -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
           </div>
-          <!-- /.col -->
+          <!-- /.row -->
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section types -->
+        <!-- /.container -->
+      </section>
+      <!-- /.section types -->
+    </div>
 
     <section class="section design">
       <div class="container">
@@ -417,173 +423,180 @@
     </section>
     <!-- /.section design -->
 
-    <section class="section section--dark how-work">
-      <div class="container">
-        <div class="row">
-          <div class="col-30">
-            <div class="section-title section-title--left">
-              <p class="section-title__text">Как мы работаем</p>
-              <h2 class="section-title__heading section-title__heading--primary">6 шагов <span class="section-title__word">до цели</span></h2>
-              <!-- /.section-title__heading -->
+    <div class="lines-first">
+      <img src="img/bg-lines-first.svg" alt="Линии" class="lines-first-bg">
+      <section class="section section--dark how-work">
+        <div class="container">
+          <div class="row">
+            <div class="col-30">
+              <div class="section-title section-title--left">
+                <p class="section-title__text" id="how-work">Как мы работаем</p>
+                <h2 class="section-title__heading section-title__heading--primary">6 шагов <span class="section-title__word">до цели</span></h2>
+                <!-- /.section-title__heading -->
+              </div>
+              <!-- /.section-title -->
             </div>
-            <!-- /.section-title -->
+            <!-- /.col30 -->
+            <div class="col-70"></div>
+            <!-- /.col70 -->
           </div>
-          <!-- /.col30 -->
-          <div class="col-70"></div>
-          <!-- /.col70 -->
+          <!-- /.row -->
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section how-work -->
-    <section class="section team">
-      <div class="container">
-        <div class="section-title team__section-title">
-          <h2 class="section-title__heading">Наша команда</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__image">
-            <img src="img/team.svg" alt="team">
-          </div>
-          <!-- /.section-title__image -->
-        </div>
-        <!-- /.section-title -->
-        <p class="team__title">
-          Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться
-        </p>
-        <div class="team__wrapper">
-          <div class="team__card">
-            <img src="img/team/idea.svg" alt="pen" class="team__image">
-            <img src="img/team/team-1.png" alt="Работник" class="team__photo">
-            <div class="team__about">
-              <h3 class="team__name">Алексей Колмаков</h3>
-              <span class="team__discription">Проектный менеджер</span>
-              <strong class="team__experience">Опыт работы 8 лет</strong>
+        <!-- /.container -->
+      </section>
+      <!-- /.section how-work -->
+    </div>
+
+    <div class="lines-third">
+      <img src="img/bg-lines-second.svg" alt="lines" class="lines-third-bg">
+      <section class="section team">
+        <div class="container">
+          <div class="section-title team__section-title">
+            <h2 class="section-title__heading" id="team">Наша команда</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="img/team.svg" alt="team">
             </div>
+            <!-- /.section-title__image -->
           </div>
-          <div class="team__card">
-            <img src="img/team/pen.svg" alt="pen" class="team__image">
-            <img src="img/team/team-2.png" alt="Работник" class="team__photo">
-            <div class="team__about">
-              <h3 class="team__name">Алиса Сухорукова</h3>
-              <span class="team__discription">Дизайнер</span>
-              <strong class="team__experience">Опыт работы 6 лет</strong>
-            </div>
-          </div>
-          <div class="team__card">
-            <img src="img/team/portfolio.svg" alt="pen" class="team__image">
-            <img src="img/team/team-3.png" alt="Работник" class="team__photo">
-            <div class="team__about">
-              <h3 class="team__name">Давид Волынев</h3>
-              <span class="team__discription">Бригадир</span>
-              <strong class="team__experience">Опыт работы 7 лет</strong>
-            </div>
-          </div>
-        </div>
-        <p class="team__text">
-          Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
-        </p>
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section team -->
-    <section class="section clients">
-      <div class="container">
-        <div class="section-title clients__section-title">
-          <h2 class="section-title__heading">Наши клиенты</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__image">
-            <img src="img/clients/clients.svg" alt="clients">
-          </div>
-          <!-- /.section-title__image -->
-          <p class="section-title__text">
-            80% наших клиентов рекомендуют нас своим знакомым и друзьям
+          <!-- /.section-title -->
+          <p class="team__title">
+            Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться
           </p>
-          <!-- /.section-title__text -->
+          <div class="team__wrapper">
+            <div class="team__card">
+              <img src="img/team/idea.svg" alt="pen" class="team__image">
+              <img src="img/team/team-1.png" alt="Работник" class="team__photo">
+              <div class="team__about">
+                <h3 class="team__name">Алексей Колмаков</h3>
+                <span class="team__discription">Проектный менеджер</span>
+                <strong class="team__experience">Опыт работы 8 лет</strong>
+              </div>
+            </div>
+            <div class="team__card">
+              <img src="img/team/pen.svg" alt="pen" class="team__image">
+              <img src="img/team/team-2.png" alt="Работник" class="team__photo">
+              <div class="team__about">
+                <h3 class="team__name">Алиса Сухорукова</h3>
+                <span class="team__discription">Дизайнер</span>
+                <strong class="team__experience">Опыт работы 6 лет</strong>
+              </div>
+            </div>
+            <div class="team__card">
+              <img src="img/team/portfolio.svg" alt="pen" class="team__image">
+              <img src="img/team/team-3.png" alt="Работник" class="team__photo">
+              <div class="team__about">
+                <h3 class="team__name">Давид Волынев</h3>
+                <span class="team__discription">Бригадир</span>
+                <strong class="team__experience">Опыт работы 7 лет</strong>
+              </div>
+            </div>
+          </div>
+          <p class="team__text">
+            Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
+          </p>
         </div>
-        <!-- /.section-title -->
-        <div class="row">
-          <div class="col-30">
-            <div class="clients__card">
-              <div class="clients__title">
-                <img src="img/clients/client-1.png" alt="Клиент" class="clients__photo">
-                <p class="clients__name">Савельева Екатерина Львовна</p>
-              </div>
-              <p class="clients__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
-              <div class="clients__info info">
-                <div class="info__item">
-                  <div class="info__img">
-                    <img src="img/clients/area.svg" alt="area">
-                  </div>
-                  <span class="info__text">40 M<sup>2</sup></span>
+        <!-- /.container -->
+      </section>
+      <!-- /.section team -->
+      <section class="section clients">
+        <div class="container">
+          <div class="section-title clients__section-title">
+            <h2 class="section-title__heading" id="clients">Наши клиенты</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="img/clients/clients.svg" alt="clients">
+            </div>
+            <!-- /.section-title__image -->
+            <p class="section-title__text">
+              80% наших клиентов рекомендуют нас своим знакомым и друзьям
+            </p>
+            <!-- /.section-title__text -->
+          </div>
+          <!-- /.section-title -->
+          <div class="row">
+            <div class="col-30">
+              <div class="clients__card">
+                <div class="clients__title">
+                  <img src="img/clients/client-1.png" alt="Клиент" class="clients__photo">
+                  <p class="clients__name">Савельева Екатерина Львовна</p>
                 </div>
-                <div class="info__item">
-                  <div class="info__img">
-                    <img src="img/clients/calendar.svg" alt="calendar">
+                <p class="clients__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+                <div class="clients__info info">
+                  <div class="info__item">
+                    <div class="info__img">
+                      <img src="img/clients/area.svg" alt="area">
+                    </div>
+                    <span class="info__text">40 M<sup>2</sup></span>
                   </div>
-                  <span class="info__text">48 дней</span>
+                  <div class="info__item">
+                    <div class="info__img">
+                      <img src="img/clients/calendar.svg" alt="calendar">
+                    </div>
+                    <span class="info__text">48 дней</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-30">
+              <div class="clients__card">
+                <div class="clients__title">
+                  <img src="img/clients/client-2.png" alt="Клиент" class="clients__photo">
+                  <p class="clients__name">Большов Михаил Анатольевич</p>
+                </div>
+                <p class="clients__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я рекомендую этих мастеров.</p>
+                <div class="clients__info info">
+                  <div class="info__item">
+                    <div class="info__img">
+                      <img src="img/clients/area.svg" alt="area">
+                    </div>
+                    <span class="info__text">90 M<sup>2</sup></span>
+                  </div>
+                  <div class="info__item">
+                    <div class="info__img">
+                      <img src="img/clients/calendar.svg" alt="calendar">
+                    </div>
+                    <span class="info__text">128 дней</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-30">
+              <div class="clients__card">
+                <div class="clients__title">
+                  <img src="img/clients/client-3.png" alt="Клиент" class="clients__photo">
+                  <p class="clients__name">Хасанов Даниил Муратович</p>
+                </div>
+                <p class="clients__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические. </p>
+                <div class="clients__info info">
+                  <div class="info__item">
+                    <div class="info__img">
+                      <img src="img/clients/area.svg" alt="area">
+                    </div>
+                    <span class="info__text">56 M<sup>2</sup></span>
+                  </div>
+                  <div class="info__item">
+                    <div class="info__img">
+                      <img src="img/clients/calendar.svg" alt="calendar">
+                    </div>
+                    <span class="info__text">86 дней</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-30">
-            <div class="clients__card">
-              <div class="clients__title">
-                <img src="img/clients/client-2.png" alt="Клиент" class="clients__photo">
-                <p class="clients__name">Большов Михаил Анатольевич</p>
-              </div>
-              <p class="clients__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я рекомендую этих мастеров.</p>
-              <div class="clients__info info">
-                <div class="info__item">
-                  <div class="info__img">
-                    <img src="img/clients/area.svg" alt="area">
-                  </div>
-                  <span class="info__text">90 M<sup>2</sup></span>
-                </div>
-                <div class="info__item">
-                  <div class="info__img">
-                    <img src="img/clients/calendar.svg" alt="calendar">
-                  </div>
-                  <span class="info__text">128 дней</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-30">
-            <div class="clients__card">
-              <div class="clients__title">
-                <img src="img/clients/client-3.png" alt="Клиент" class="clients__photo">
-                <p class="clients__name">Хасанов Даниил Муратович</p>
-              </div>
-              <p class="clients__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические. </p>
-              <div class="clients__info info">
-                <div class="info__item">
-                  <div class="info__img">
-                    <img src="img/clients/area.svg" alt="area">
-                  </div>
-                  <span class="info__text">56 M<sup>2</sup></span>
-                </div>
-                <div class="info__item">
-                  <div class="info__img">
-                    <img src="img/clients/calendar.svg" alt="calendar">
-                  </div>
-                  <span class="info__text">86 дней</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- /.row -->
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section clients -->
+        <!-- /.container -->
+      </section>
+      <!-- /.section clients -->
+    </div>
 
   </main>
 
   <footer class="footer section--dark">
     <div class="container">
-      <div class="footer__wrap">
+      <div class="footer__wrap" id="footer">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send-footer.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
@@ -611,10 +624,10 @@
       <div class="footer__order">
         <div class="footer__tag">
           <span class="footer__text">Ростов на дону, Торговый центр Plaza</span>
-          <span class="footer__text">Прямой телефон <a href="#" class="footer__tel">+7 (999) 768 32 99</a></span>
+          <span class="footer__text">Прямой телефон <a href="tel:+79997683299" class="footer__tel">+7 (999) 768 32 99</a></span>
         </div>
         <div class="footer__social">
-          <div class="footer__img"><a href="#"><img src="img/footer-email.png" alt="Написать"></a></div>
+          <div class="footer__img"><a href="mailto:example@yourmail.ru"><img src="img/footer-email.png" alt="Написать"></a></div>
           <div class="footer__img"><a href="#"><img src="img/footer-inst.png" alt="Написать"></a></div>
         </div>
         <div class="map footer__map" id="map"></div>
@@ -625,14 +638,14 @@
     <div class="footer__menu">
       <div class="container">
         <div class="menu">
-          <div class="logo menu__logo">Repair Design Project</div>
+          <div class="logo menu__logo"><a href="index.html" class="logo">Repair Design Project</a></div>
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">Проекты</a>
-            <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
-            <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#hero" class="nav__item">Главная</a>
+            <a href="#projects" class="nav__item">Проекты</a>
+            <a href="#how-work" class="nav__item">Замер</a>
+            <a href="#team" class="nav__item">Команда</a>
+            <a href="#clients" class="nav__item">Отзывы</a>
+            <a href="#footer" class="nav__item">Контакты</a>
           </nav>
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>

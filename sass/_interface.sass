@@ -111,3 +111,31 @@
 input 
   &.invalid 
     border-bottom: 1px solid tomato
+
+.lines-first 
+  position: relative
+  z-index: -1
+  &-bg 
+    position: absolute
+    opacity: 0.2
+    top: -50%
+    left: 0
+    width: 100%
+.lines-second 
+  position: relative
+  &-bg 
+    z-index: -1
+    position: absolute
+    opacity: 0.2
+    top: -20%
+    left: 0
+    width: 100%
+.lines-third 
+  position: relative
+  &-bg 
+    z-index: -1
+    position: absolute
+    opacity: 0.2
+    top: -60%
+    left: 0
+    width: 100%
