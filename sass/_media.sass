@@ -271,13 +271,6 @@
       height: 1.5rem
 
 @media screen and ( max-height: 520px )
-  .hero
-    &__scroll-down
-      display: none
-    &::after
-      display: none
-
-@media screen and ( max-height: 320px )
   .modal 
     &__form div 
       &.invalid 
@@ -303,6 +296,13 @@
       margin-bottom: 1rem
     &__button
       align-self: center
+  .hero
+    &__scroll-down
+      display: none
+    &::after
+      display: none
+
+@media screen and ( max-height: 320px )
   .hero
     height: 100%
     padding-top: 5.5rem

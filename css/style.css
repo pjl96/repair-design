@@ -1762,12 +1762,6 @@ input.invalid {
     height: 1.5rem; } }
 
 @media screen and (max-height: 520px) {
-  .hero__scroll-down {
-    display: none; }
-  .hero::after {
-    display: none; } }
-
-@media screen and (max-height: 320px) {
   .modal__form div.invalid {
     color: tomato;
     position: absolute;
@@ -1796,6 +1790,12 @@ input.invalid {
   .modal__button {
     -ms-flex-item-align: center;
     align-self: center; }
+  .hero__scroll-down {
+    display: none; }
+  .hero::after {
+    display: none; } }
+
+@media screen and (max-height: 320px) {
   .hero {
     height: 100%;
     padding-top: 5.5rem; }
