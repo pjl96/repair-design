@@ -4,7 +4,6 @@
   "description": "Сайт по ремонту квартир",
   "main": "index.js",
   "dependencies": {
-    "autoprefixer": "^9.7.5",
     "browser-sync": "^2.26.7",
     "clean-css": "^4.2.3",
     "gulp-lodash": "^0.1.2",
@@ -12,6 +11,8 @@
     "lodash.template": "^4.5.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "cross-env": "^7.0.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
