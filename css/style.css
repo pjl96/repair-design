@@ -561,6 +561,9 @@ input.invalid {
     left: 0;
     width: 100%; }
 
+*:focus {
+  outline: none; }
+
 .header {
   position: fixed;
   left: 0;
@@ -1307,6 +1310,12 @@ input.invalid {
 @media screen and (max-width: 992px) {
   .nav {
     display: none; }
+    .nav__item:hover:hover {
+      color: #fff; }
+  .button:hover {
+    cursor: default; }
+  .button--primary:hover {
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); }
   .hero__instagram {
     display: none; }
   .hero__content {
@@ -1324,8 +1333,14 @@ input.invalid {
     align-items: center; }
   .types__card {
     margin-bottom: 5rem; }
-  .design__card {
-    margin-bottom: 5rem; }
+  .design {
+    background-color: #131313; }
+    .design__section-title {
+      color: #fff; }
+    .design__title {
+      color: #fff; }
+    .design__card {
+      margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
   .section-title--left {
@@ -1369,6 +1384,12 @@ input.invalid {
     max-width: 25rem;
     margin: auto;
     flex-direction: column; }
+  .control__policy {
+    position: relative; }
+    .control__policy div.invalid {
+      position: absolute;
+      top: 3rem;
+      left: 0; }
   .control__input-group {
     display: flex;
     flex-direction: column;
@@ -1464,6 +1485,12 @@ input.invalid {
     font-size: 1rem; }
   .footer {
     background: #131313; }
+    .footer__policy {
+      position: relative; }
+      .footer__policy div.invalid {
+        position: absolute;
+        top: 3rem;
+        left: 0; }
     .footer__wrap {
       width: 100%;
       padding: 0;
@@ -1479,6 +1506,10 @@ input.invalid {
   .policy__label--center {
     justify-content: start;
     font-size: 1rem; }
+  .design__title {
+    font-size: 1.3rem; }
+  .team__title {
+    font-size: 1.2rem; }
   .footer__order {
     display: flex;
     flex-direction: column; }
@@ -1518,3 +1549,39 @@ input.invalid {
     display: none; }
   .hero::after {
     display: none; } }
+
+@media screen and (max-height: 320px) {
+  .modal__form div.invalid {
+    color: tomato;
+    position: absolute;
+    bottom: -1.1rem;
+    left: 0; }
+  .modal__form div#policyCheckbox-error {
+    position: absolute;
+    bottom: 4.6rem;
+    left: 3.5rem; }
+  .modal__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem; }
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 0; }
+  .modal__policy {
+    margin-bottom: 1rem; }
+  .modal__button {
+    align-self: center; }
+  .hero {
+    height: 100%;
+    padding-top: 5.5rem; }
+    .hero__title {
+      font-size: 1.7rem; }
+    .hero__text {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .hero__scroll-down {
+      display: none; }
+    .hero::after {
+      display: none; } }
