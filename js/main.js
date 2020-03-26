@@ -257,5 +257,20 @@ $(document).ready(function () {
       $('body,html').animate({scrollTop: top - 100}, 1000);
   });
       
+  // Подключаем видео с ютуба
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: 'vdcPxNS27rM',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
 
 });
