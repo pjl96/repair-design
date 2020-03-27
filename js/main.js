@@ -336,7 +336,6 @@ $(document).ready(function () {
     var myMapTemp = new ymaps.Map("map", {
       center: [47.244729, 39.723187],
       zoom: 16,
-      controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
     });
     var myPlacemarkTemp = new ymaps.Placemark(myMapTemp.getCenter(), {
           hintContent: 'Наш офис',
@@ -354,7 +353,7 @@ $(document).ready(function () {
           iconImageOffset: [-5, -38]
         });
     myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
-  
+    myMapTemp.behaviors.disable('scrollZoom');
     // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
     var layer = myMapTemp.layers.get(0).get(0);
   
@@ -440,9 +439,7 @@ $(document).ready(function () {
       }
     );  
   }
-  
   $(function() {
-  
     //Запускаем основную функцию
     ymap();
   
