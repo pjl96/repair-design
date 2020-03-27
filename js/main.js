@@ -102,7 +102,10 @@ $(document).ready(function () {
         minlength: 2
       },
       policyCheckbox: "required",
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       userEmail: {
         required: true,
         email: true
@@ -116,7 +119,10 @@ $(document).ready(function () {
       policyCheckbox: {
         required: "Согласие обязательно"
       },
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Введите телефон",
+        minlength: "Введите в формате +7 (xxx) xxx - xx - xx"
+      },
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
@@ -153,7 +159,10 @@ $(document).ready(function () {
         required: true,
         minlength: 2
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       policyCheckbox: "required"
     },
     messages: {
@@ -162,7 +171,10 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв"
       },
       policyCheckbox: "Согласие обязательно",
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Введите телефон",
+        minlength: "Введите в формате +7 (xxx) xxx - xx - xx"
+      },
     },
     submitHandler: function(form) {
       $.ajax({
@@ -226,12 +238,12 @@ $(document).ready(function () {
   // Маска для телефона
   $('[type=tel]').mask('+7 (000) 000-00-00');
 
-  [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-    img.setAttribute('src', img.getAttribute('data-src'));
-    img.onload = function() {
-    img.removeAttribute('data-src');
-    };
-  });
+  // [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+  //   img.setAttribute('src', img.getAttribute('data-src'));
+  //   img.onload = function() {
+  //   img.removeAttribute('data-src');
+  //   };
+  // });
 
 
   // setTimeout(function(){
@@ -442,7 +454,18 @@ $(document).ready(function () {
   $(function() {
     //Запускаем основную функцию
     ymap();
-  
+  });
+
+  var bLazy = new Blazy({
+    success: function(element){
+      setTimeout(function(){
+    // We want to remove the loader gif now.
+    // First we find the parent container
+    // then we remove the "loading" class which holds the loader image
+    var parent = element.parentNode;
+    parent.className = parent.className.replace(/\bloading\b/,'');
+      }, 200);
+    }
   });
 
 });

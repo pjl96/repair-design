@@ -1899,3 +1899,12 @@ input.invalid {
       display: none; }
     .hero::after {
       display: none; } }
+
+@media screen and (max-width: 576px) and (max-height: 400px) {
+  .hero__title {
+    font-size: 2rem; }
+  .hero__text {
+    height: 6.8rem; }
+  .hero__button {
+    font-size: 1rem;
+    margin-bottom: 5px; } }
