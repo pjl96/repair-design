@@ -58,15 +58,24 @@
           display: none
       &__text
         width: 100%
+  .card__item--hide:nth-child(7)::after 
+    content: '...'
+    padding-left: 5px
+  .card__item--hide:nth-child(n+8)
+    display: none
   .team 
     background-color: $dark
+    &__title 
+      color: $light
+    &__section-title 
+      padding-top: 0
+      margin-top: 0
+      color: $light
     &__wrapper 
       flex-direction: column
       justify-content: center
     &__card 
       margin: 3.857rem auto
-    &__section-title 
-      margin-top: 0
     &__text
       color: $light
       padding-bottom: 0
