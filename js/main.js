@@ -89,6 +89,13 @@ $(document).ready(function () {
   $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+    },
     rules: {
       userName: {
         required: true,
@@ -106,7 +113,9 @@ $(document).ready(function () {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв"
       },
-      policyCheckbox: "Согласие обязательно",
+      policyCheckbox: {
+        required: "Согласие обязательно"
+      },
       userPhone: "Заполните поле",
       userEmail: {
         required: "Заполните поле",
@@ -132,6 +141,13 @@ $(document).ready(function () {
   $('.control__form').validate({
     errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+    },
     rules: {
       userName: {
         required: true,
@@ -166,6 +182,13 @@ $(document).ready(function () {
   $('.footer__form').validate({
     errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+    },
     rules: {
       userName: {
         required: true,

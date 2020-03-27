@@ -1790,6 +1790,8 @@ input.invalid {
   .modal__button {
     -ms-flex-item-align: center;
     align-self: center; }
+  .hero__text {
+    margin-bottom: 2rem; }
   .hero__scroll-down {
     display: none; }
   .hero::after {
