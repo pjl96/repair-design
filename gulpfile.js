@@ -1,9 +1,10 @@
-var {src, dest, watch} = require('gulp');
+var {src, dest, watch, series} = require('gulp');
 var browserSync = require('browser-sync').create();
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
+var minify = require('gulp-minify');
+var tinypng = require('gulp-tinypng-compress');
 
 // Static server
 function bs() {
@@ -30,11 +31,22 @@ function serveSass() {
       .pipe(browserSync.stream());
 };
 
-exports.serve = bs;
+function buildCSS(done) {
+  src('css/**/**.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest('dist/css/'));
+  done();
+}
 
-function defalt() { 
-  gulp.src('./css/*.css')
-      .pipe(cssmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('dist'));
-};
+function buildJS(done) {
+  src(['js/**.js', '!js/**.min.js'])
+    .pipe(minify())
+    .pipe(dest('dist/js/'))
+  src('js/**.min.js').pipe(dest('dist/js/'))
+  done();
+}
+
+
+exports.serve = bs;
+exports.build = series(buildCSS, buildJS);
+
