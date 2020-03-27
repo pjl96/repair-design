@@ -67,13 +67,71 @@
     margin-bottom: 3rem
     &:first-of-type 
       margin-right: 1rem
-.map 
+.ymap-container
   filter: grayscale(100%)
   max-width: 66rem
   min-height: 33.214rem
   margin: auto
   margin-bottom: 4rem
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  background: url('../img/ya-map.png') center center
+  background-size: cover
+#map 
+  position: relative
+  z-index: 7
+  width: 100%
+  height: 33.214rem
+  cursor: pointer
+  background-color: transparent
 .ymaps-2-1-76-map
   width: 66rem
 .ymaps-2-1-76-map .ymaps-2-1-76-i-ua_js_yes .ymaps-2-1-76-map-bg .ymaps-2-1-76-islets_map-lang-ru
   width: 66rem
+
+.loader 
+  position: absolute
+  z-index: 15
+  top: -100%
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+  background-color: rgba(0,0,0,.55)
+ 
+.loader::after,
+.loader::before 
+  box-sizing: border-box
+
+ 
+.loader.is-active 
+  top: 0
+  opacity: 1
+
+ 
+.loader-default::after 
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  width: 48px
+  height: 48px
+  content: ''
+  animation: rotation 1s linear infinite
+  border: solid 8px #ffffff
+  border-left-color: transparent
+  border-radius: 50%
+@keyframes rotation 
+  from 
+    transform: rotate(0)
+  to 
+    transform: rotate(359deg)
+@keyframes blink 
+  from 
+    opacity: .5
+  to 
+    opacity: 1

@@ -369,7 +369,13 @@ body {
   font-size: 1rem; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+  img[data-src] {
+    opacity: 0; }
 
 .section {
   padding: 60px 0; }
@@ -1343,19 +1349,99 @@ input.invalid {
     .footer__img:first-of-type {
       margin-right: 1rem; }
 
-.map {
+.ymap-container {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   max-width: 66rem;
   min-height: 33.214rem;
   margin: auto;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../img/ya-map.png") center center;
+  background-size: cover; }
+
+#map {
+  position: relative;
+  z-index: 7;
+  width: 100%;
+  height: 33.214rem;
+  cursor: pointer;
+  background-color: transparent; }
 
 .ymaps-2-1-76-map {
   width: 66rem; }
 
 .ymaps-2-1-76-map .ymaps-2-1-76-i-ua_js_yes .ymaps-2-1-76-map-bg .ymaps-2-1-76-islets_map-lang-ru {
   width: 66rem; }
+
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  -webkit-transition: opacity .7s ease;
+  -o-transition: opacity .7s ease;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.55); }
+
+.loader::after,
+.loader::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.loader.is-active {
+  top: 0;
+  opacity: 1; }
+
+.loader-default::after {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  -webkit-animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+  border: solid 8px #ffffff;
+  border-left-color: transparent;
+  border-radius: 50%; }
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@-webkit-keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
 
 .modal {
   opacity: 0;
@@ -1739,7 +1825,7 @@ input.invalid {
     order: 0; }
   .footer__menu {
     display: none; }
-  .footer .map {
+  .footer .ymap-container {
     width: 100%;
     min-height: 18rem;
     -webkit-box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
